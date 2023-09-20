@@ -26,8 +26,8 @@ const Recipes = () => {
 
     const toast = useToast()
 
-    const fetchData = () => {
-        fetch("https://easy-pink-walkingstick-tam.cyclic.cloud/recipes")
+    const fetchData = async () => {
+        await fetch("https://easy-pink-walkingstick-tam.cyclic.cloud/recipes")
             .then((res) => res.json())
             .then((data) => {
                 setRecipes(data.recipes);
@@ -94,7 +94,7 @@ const Recipes = () => {
                     status: 'success',
                     duration: 9000,
                     isClosable: true,
-                  })
+                })
             })
             .catch((err) => {
                 console.log(err);
