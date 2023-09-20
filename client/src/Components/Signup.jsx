@@ -26,7 +26,7 @@ const Signup = () => {
             password,
         }
 
-        fetch("http://localhost:8000/user/signup", {
+        fetch("https://easy-pink-walkingstick-tam.cyclic.cloud/user/signup", {
             method: 'POST',
             headers: {
                 "content-type": "application/json"
